@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>VIOTR.COM - Virtual and Augmented Reality with IoT Monitoring and Management</title>
+	<title>About VIOTR.COM - Virtual and Augmented Reality with IoT Monitoring and Management</title>
 
 	<style type="text/css">
 		
@@ -74,6 +74,89 @@
 			    position: absolute;
 
 			  }
+			  .text {
+
+				    width: 400px;
+				    position: absolute;
+				    right: 20px;
+				    top: 20px;
+				    background-color: white;
+				    height: 100%;
+				    padding: 10px;
+
+			  }
+
+			  h2 {
+				  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+				  margin: 0;
+				  padding: 0;
+				      margin-bottom: 10px;
+				}
+				 
+				ul {
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				}
+				 
+				li {
+				  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+				  border-bottom: 1px solid #ccc;
+				}
+				 
+				li:last-child {
+				  border: none;
+				}
+				 
+				li a {
+				  text-decoration: none;
+				  color: #000;
+				  display: block;
+				  width: 400px;
+				 
+				  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  transition: font-size 0.3s ease, background-color 0.3s ease;
+				}
+				 
+				li a:hover {
+				  /*font-size: 30px;*/
+				  background: #f6f6f6;
+				}
+				.p0 {
+					font-size: 0.8em;
+					position: absolute;
+					right: 20px;
+					top: 0px;
+				}
+				.close-thik:after {
+					  content: '✖'; 
+					}
+				.open-thik:after {
+					position: absolute;
+					right: 15px;
+					top: 10px;					
+					font-size: 2em;
+					color: white;
+					content: '\24d8';
+					color: hsl(20, 100%, 20%);
+					text-shadow: 3px 1px 30px rgba(150, 150, 150, 1);
+				  animation: blinker 1s linear infinite;
+				}
+				@keyframes blinker {  
+				  50% { opacity: 0; }
+				}
+				.p1 {
+					font-size: 0.8em;
+					font: Helvetica, Verdana, sans-serif;
+				}
+				.p2 {
+					font-size: 1.2em;
+					font: Helvetica, Verdana, sans-serif;
+				 	background: #f6f6f6;
+				}
 
 			}
 	</style>
@@ -83,8 +166,38 @@
 
 <div class="wrap">
   <div class="bg"></div>
-	<h1><a class="popup" href="#!" data-link="https://www.youtube.com/embed/fCRA3u8pvrM?autoplay=1&showinfo=0&controls=0" data-title="">CLICK FOR PROTO</a></h1>
+	<h1 style="display: none;" id="hmain"><a class="popup" href="#!" data-link="https://www.youtube.com/embed/fCRA3u8pvrM?autoplay=1&showinfo=0&controls=0" data-title="" onclick="$('#about').show('slow'); $('#hmain').hide('slow'); $('#video-view').show('slow');">CLICK FOR PROTO</a></h1>
 	<div id="video-view">
+	</div>
+	<p class="p0 open-thik" onclick="$('#about').show('slow'); $('#hmain').hide('slow');"></p>
+	<div class="text" id="about">
+			<p class="p0 close-thik" onclick="$('#about').hide('slow'); $('#hmain').show('slow'); $('#video-view').hide('slow');"></p>		
+			<h2>VIOTR.COM</h2>
+
+			<ul>
+				<li><a onmouseover="gbi(1);" onmouseout="gsm(1);">Show to your customers</a></li>
+				<li><a onmouseover="gbi(2);" onmouseout="gsm(2);">Visit your sites anytime</a></li>
+				<li><a onmouseover="gbi(3);" onmouseout="gsm(3);">Train your employees</a></li>
+				<li><a onmouseover="gbi(4);" onmouseout="gsm(4);">Access in emergency case</a></li>
+				<li><a onmouseover="gbi(5);" onmouseout="gsm(5);">Maintain at a new level</a></li>
+			</ul>
+
+			<p id="1" class="p1">
+				A great way to show your customers the level of innovation in your company.
+			</p>
+			<p id="2" class="p1">
+				Inspect your remotely located technology sites without leaving the office.
+			</p>
+			<p id="3" class="p1">
+				Train personnel before sending them to remote sites.
+			</p>
+			<p id="4" class="p1">
+				Get virtual access to your premises in case of a critical situation for prompt decision-making.
+			</p>
+			<p id="5" class="p1">
+				Translate operational management functions at your enterprise to a new level with innovative virtual and augmented reality technology that communicates information with IoT sensors and information systems in real time.
+			</p>
+
 	</div>
 
 	<div class="mail">
@@ -93,7 +206,16 @@
 
 </div>
 
-
+<script type="text/javascript">
+	function gbi(id) { 
+		$('#'+id).removeClass('p1'); 
+		$('#'+id).addClass('p2'); 
+	}
+	function gsm(id) { 
+		$('#'+id).removeClass('p2'); 
+		$('#'+id).addClass('p1'); 
+	}
+</script>
 
 <script src="jquery.min.js"></script>
 <script type="text/javascript">
@@ -106,6 +228,10 @@
 	});
 </script>
 <script type="text/javascript">
+
+      $(function() {
+      	setTimeout(function() { $('#about').hide('slow'); $('#hmain').show('slow'); }, 1000);
+      });	
 	
 	var lFollowX = 0,
     lFollowY = 0,
