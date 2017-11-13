@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About VIOTR.COM - Virtual and Augmented Reality with IoT Monitoring and Management</title>
+
+	<style type="text/css">
+		
+			@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+
+			*, *:before, *:after {
+			  box-sizing: border-box;
+			}
+
+			html, body {
+			  height: 100%;
+			}
+
+			body {
+			  position: relative;
+			  padding: 20px;
+			  
+			  font-family: 'Libre Baskerville', serif;
+			}
+
+			h1 {
+			  margin: 0;
+			  padding: 0;
+			  
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  
+			  color: white;
+			  font-size: 7vmin;
+			  text-align: center;
+			  text-transform: uppercase;
+
+			  transform: translate3d(-50%, -50%, 0);
+			}
+
+			.wrap {
+			  height: 100%;  
+			  position: relative;
+			  overflow: hidden;
+			}
+
+			  img, .bg {
+			    
+			    
+			  }
+			  
+			  .bg {
+			    width: 100%;
+			    height: 100%;
+			    
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    z-index: -1;
+			    
+			    background: url('VIOTR.png') no-repeat center center;
+			    background-size: cover;
+
+			    transform: scale(1.1);
+			  }
+			  a {
+			  	color: white;
+    			text-decoration: none;
+			  }
+			  .mail {
+
+			    bottom: 20px;
+			    left: 20px;
+			    position: absolute;
+
+			  }
+			  .text {
+
+				    width: 400px;
+				    position: absolute;
+				    right: 20px;
+				    top: 20px;
+				    background-color: white;
+				    height: 100%;
+				    padding: 10px;
+
+			  }
+
+			  h2 {
+				  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+				  margin: 0;
+				  padding: 0;
+				      margin-bottom: 10px;
+				}
+				 
+				ul {
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				}
+				 
+				li {
+				  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+				  border-bottom: 1px solid #ccc;
+				}
+				 
+				li:last-child {
+				  border: none;
+				}
+				 
+				li a {
+				  text-decoration: none;
+				  color: #000;
+				  display: block;
+				  width: 400px;
+				 
+				  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+				  transition: font-size 0.3s ease, background-color 0.3s ease;
+				}
+				 
+				li a:hover {
+				  /*font-size: 30px;*/
+				  background: #f6f6f6;
+				}
+				.p0 {
+					font-size: 0.8em;
+					position: absolute;
+					right: 20px;
+					top: 0px;
+				}
+				.close-thik:after {
+					  content: '✖'; 
+					}
+				.open-thik:after {
+					position: absolute;
+					right: 15px;
+					top: 10px;					
+					font-size: 2em;
+					color: white;
+					content: '\24d8';
+					color: hsl(20, 100%, 20%);
+					text-shadow: 3px 1px 30px rgba(150, 150, 150, 1);
+				  animation: blinker 1s linear infinite;
+				}
+				@keyframes blinker {  
+				  50% { opacity: 0; }
+				}
+				.p1 {
+					font-size: 0.8em;
+					font: Helvetica, Verdana, sans-serif;
+				}
+				.p2 {
+					font-size: 1.2em;
+					font: Helvetica, Verdana, sans-serif;
+				 	background: #f6f6f6;
+				}
+
+			}
+	</style>
+</head>
+<body>
+
+
+<div class="wrap">
+	<!-- https://youtu.be/d-VHmT1WuRU  -->
+	<!-- https://www.youtube.com/embed/fCRA3u8pvrM?autoplay=1&showinfo=0&controls=0 -->
+  <div class="bg"></div>
+	<h1 style="display: none;" id="hmain"><a class="popup" href="#!" data-link="https://www.youtube.com/embed/d-VHmT1WuRU?autoplay=1&showinfo=0&controls=0" data-title="" onclick="$('#about').show('slow'); $('#hmain').hide('slow'); $('#video-view').show('slow');">CLICK FOR PROTO</a></h1>
+	<div id="video-view">
+	</div>
+	<p class="p0 open-thik" onclick="$('#about').show('slow'); $('#hmain').hide('slow');"></p>
+	<div class="text" id="about">
+			<p class="p0 close-thik" onclick="$('#about').hide('slow'); $('#hmain').show('slow'); $('#video-view').hide('slow');"></p>		
+			<h2>VIOTR.COM</h2>
+
+			<ul>
+				<li><a onmouseover="gbi(1);" onmouseout="gsm(1);">Show to your customers</a></li>
+				<li><a onmouseover="gbi(2);" onmouseout="gsm(2);">Visit your sites anytime</a></li>
+				<li><a onmouseover="gbi(3);" onmouseout="gsm(3);">Train your employees</a></li>
+				<li><a onmouseover="gbi(4);" onmouseout="gsm(4);">Access in emergency case</a></li>
+				<li><a onmouseover="gbi(5);" onmouseout="gsm(5);">Maintain at a new level</a></li>
+			</ul>
+
+			<p id="1" class="p1">
+				A great way to show your customers the level of innovation in your company.
+			</p>
+			<p id="2" class="p1">
+				Inspect your remotely located technology sites without leaving the office.
+			</p>
+			<p id="3" class="p1">
+				Train personnel before sending them to remote sites.
+			</p>
+			<p id="4" class="p1">
+				Get virtual access to your premises in case of a critical situation for prompt decision-making.
+			</p>
+			<p id="5" class="p1">
+				Translate operational management functions at your enterprise to a new level with innovative virtual and augmented reality technology that communicates information with IoT sensors and information systems in real time.
+			</p>
+
+	</div>
+
+	<div class="mail">
+		<a href="mailto:welcome@viotr.com">welcome@viotr.com</a>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	function gbi(id) { 
+		$('#'+id).removeClass('p1'); 
+		$('#'+id).addClass('p2'); 
+	}
+	function gsm(id) { 
+		$('#'+id).removeClass('p2'); 
+		$('#'+id).addClass('p1'); 
+	}
+</script>
+
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+	$(".popup").click(function () {
+    var $this = $(this);
+    var $iframe = $("<iframe>").attr("src", $this.data("link")).css({"width": 380, "height": 215});
+    var $title = $("<h1>").text($this.data("title"));
+    $("#video-view").html($title).append($iframe);
+    $iframe.wrap("<div class='class-video'>");
+	});
+</script>
+<script type="text/javascript">
+
+      $(function() {
+      	setTimeout(function() { $('#about').hide('slow'); $('#hmain').show('slow'); }, 1000);
+      });	
+	
+	var lFollowX = 0,
+    lFollowY = 0,
+    x = 0,
+    y = 0,
+    friction = 1 / 30;
+
+	function moveBackground() {
+	  x += (lFollowX - x) * friction;
+	  y += (lFollowY - y) * friction;
+	  
+	  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+	  $('.bg').css({
+	    '-webit-transform': translate,
+	    '-moz-transform': translate,
+	    'transform': translate
+	  });
+
+	  window.requestAnimationFrame(moveBackground);
+	}
+
+	$(window).on('mousemove click', function(e) {
+
+		  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+		  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+		  lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+		  lFollowY = (10 * lMouseY) / 100;
+
+		});
+
+		moveBackground();
+</script>
+</body>
+</html>
+
+
